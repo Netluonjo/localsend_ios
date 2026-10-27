@@ -58,15 +58,17 @@ ios/LocalSendIOS/
 
 ## 🛠 Hướng Dẫn Mở & Chạy Dự Án
 
-### Cách 1: Mở trực tiếp trên Mac bằng Xcode
-1. Mở Xcode trên macOS.
-2. Chọn **File -> Open...** và trỏ tới thư mục `ios/LocalSendIOS` (hoặc mở tệp `Package.swift`).
-3. Chọn thiết bị đích (iPhone hoặc Simulator) và bấm **Run (Cmd + R)**.
+### Cách 1: Mở trực tiếp bằng tệp LocalSendIOS.xcodeproj (Khuyến nghị)
+1. Trên macOS, nhấp đúp vào file **`LocalSendIOS.xcodeproj`** (hoặc mở Xcode -> **File -> Open...** -> chọn thư mục chứa dự án hoặc file `LocalSendIOS.xcodeproj`).
+2. Ở thanh chọn Scheme phía trên, chọn thiết bị đích (ví dụ: iPhone 15 / iPhone 16 Simulator hoặc iPhone thật của bạn).
+3. Bấm nút **Run (Cmd + R)** để biên dịch và chạy app.
 
-### Cách 2: Tạo Xcode Project mới (App iOS)
-1. Trong Xcode, tạo dự án mới: **iOS -> App**, đặt tên `LocalSendIOS`, chọn Interface là **SwiftUI**.
-2. Kéo toàn bộ các thư mục `Models/`, `Network/`, `ViewModels/`, `Views/` và `Info.plist` vào dự án.
-3. Ký Certificate (Apple ID miễn phí) và cắm cáp iPhone để cài đặt.
+### Cách 2: Ký Certificate khi cài lên iPhone thật
+1. Trong Xcode, nhấp vào thẻ dự án **LocalSendIOS** ở thanh điều hướng bên trái.
+2. Chọn tab **Signing & Capabilities**.
+3. Tại mục **Team**, chọn tài khoản Apple ID cá nhân của bạn (miễn phí).
+4. Đổi nhẹ **Bundle Identifier** nếu cần (ví dụ: `com.yourname.localsend.ios`).
+5. Cắm cáp iPhone và bấm **Run (Cmd + R)**.
 
 ### Cách 3: Build tự động qua GitHub Actions (Không cần Mac)
 Nếu bạn đang dùng máy tính Windows, có thể đẩy mã nguồn này lên GitHub và sử dụng GitHub Actions với môi trường `macos-latest` để tự động biên dịch thành file `.ipa` rồi cài lên iPhone qua **AltStore** hoặc **Sideloadly**.

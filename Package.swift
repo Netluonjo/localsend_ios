@@ -18,7 +18,7 @@ let package = Package(
         .target(
             name: "LocalSendIOS",
             path: ".",
-            exclude: ["Info.plist"]
+            exclude: ["Info.plist", "LocalSendIOS.xcodeproj", "README.md", "Assets.xcassets"]
         )
     ]
 )
