@@ -239,7 +239,7 @@ public final class LocalHttpServer {
             size: Int64(body.count),
             senderOrReceiver: "Thiết bị gửi",
             isIncoming: true,
-            status = "Hoàn tất",
+            status: "Hoàn tất",
             fileURL: targetURL
         )
 
